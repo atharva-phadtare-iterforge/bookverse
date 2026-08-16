@@ -1,68 +1,182 @@
 [
     {
-        "title": "The Alchemist",
-        "author": "Paulo Coelho",
-        "price": 29,
-        "stock": 10
+        "title": "Hacking APIs",
+        "isbn": 0,
+        "price": 120,
+        "stock": 1,
+        "author": {
+            "name": "Corey J. Ball"
+        }
     },
     {
-        "title": "1984",
-        "author": "George Orwell",
-        "price": 19,
-        "stock": 15
+        "title": "Api sejarah",
+        "isbn": 0,
+        "price": 120,
+        "stock": 1,
+        "author": {
+            "name": "Ahmad Mansur Suryanegara"
+        }
     },
     {
-        "title": "Atomic Habits",
-        "author": "James Clear",
-        "price": 49,
-        "stock": 8
+        "title": "RESTful Web APIs: Services for a Changing World",
+        "isbn": 0,
+        "price": 120,
+        "stock": 1,
+        "author": {
+            "name": "Leonard Richardson"
+        }
     },
     {
-        "title": "The Great Gatsby",
-        "author": "F. Scott Fitzgerald",
-        "price": 24,
-        "stock": 5
+        "title": "Django for APIs",
+        "isbn": 0,
+        "price": 120,
+        "stock": 1,
+        "author": {
+            "name": "William S. Vincent"
+        }
     },
     {
-        "title": "To Kill a Mockingbird",
-        "author": "Harper Lee",
-        "price": 10,
-        "stock": 7
+        "title": "Kereta api Indonesia",
+        "isbn": 0,
+        "price": 120,
+        "stock": 1,
+        "author": {
+            "name": "Indonesia. Departemen Penerangan"
+        }
     },
     {
-        "title": "The Hobbit",
-        "author": "J.R.R. Tolkien",
-        "price": 12,
-        "stock": 12
+        "title": "Api tauhid",
+        "isbn": 0,
+        "price": 120,
+        "stock": 1,
+        "author": {
+            "name": "Habiburrahman El Shirazy"
+        }
     },
     {
-        "title": "Pride and Prejudice",
-        "author": "Jane Austen",
-        "price": 5,
-        "stock": 9
+        "title": "Api sejarah",
+        "isbn": 0,
+        "price": 120,
+        "stock": 1,
+        "author": {
+            "name": "Ahmad Mansur Suryanegara"
+        }
     },
     {
-        "title": "Harry Potter",
-        "author": "J.K. Rowling",
-        "price": 11,
-        "stock": 20
+        "title": "APIs",
+        "isbn": 0,
+        "price": 120,
+        "stock": 1,
+        "author": {
+            "name": "Daniel Jacobson"
+        }
     },
     {
-        "title": "The Psychology of Money",
-        "author": "Morgan Housel",
-        "price": 35,
-        "stock": 6
+        "title": "Learn API",
+        "isbn": 0,
+        "price": 120,
+        "stock": 1,
+        "author": {
+            "name": "Learn APi"
+        }
     },
     {
-        "title": "Rich Dad Poor Dad",
-        "author": "Robert Kiyosaki",
-        "price": 29,
-        "stock": 11
+        "title": "API Testing and Development with Postman",
+        "isbn": 0,
+        "price": 120,
+        "stock": 1,
+        "author": {
+            "name": "Dave Westerveld"
+        }
     },
     {
-        "title": "ABC",
-        "author": "Robert Kiyosaki",
-        "price": 29,
-        "stock": 11
+        "title": "Melihat api bekerja",
+        "isbn": 0,
+        "price": 120,
+        "stock": 1,
+        "author": {
+            "name": "M. Aan Mansyur"
+        }
+    },
+    {
+        "title": "Bandung lautan api",
+        "isbn": 0,
+        "price": 120,
+        "stock": 1,
+        "author": {
+            "name": "Djajusman."
+        }
+    },
+    {
+        "title": "Honeybee",
+        "isbn": 0,
+        "price": 120,
+        "stock": 1,
+        "author": {
+            "name": "Candace Fleming"
+        }
+    },
+    {
+        "title": "API Textbook of Medicine",
+        "isbn": 0,
+        "price": 120,
+        "stock": 1,
+        "author": {
+            "name": "Sandhya Kamath"
+        }
+    },
+    {
+        "title": "RESTful API Design",
+        "isbn": 0,
+        "price": 120,
+        "stock": 1,
+        "author": {
+            "name": "Matthias Biehl"
+        }
+    },
+    {
+        "title": "Pengantar studi Islam",
+        "isbn": 0,
+        "price": 120,
+        "stock": 1,
+        "author": {
+            "name": "Sjafa\u02bcat."
+        }
+    },
+    {
+        "title": "ASP. NET Core Web API",
+        "isbn": 0,
+        "price": 120,
+        "stock": 1,
+        "author": {
+            "name": "Valerio De Sanctis"
+        }
+    },
+    {
+        "title": "Unix Network Programming",
+        "isbn": 0,
+        "price": 120,
+        "stock": 1,
+        "author": {
+            "name": "W. Richard Stevens"
+        }
+    },
+    {
+        "title": "Hukum pengangkutan darat",
+        "isbn": 0,
+        "price": 120,
+        "stock": 1,
+        "author": {
+            "name": "Siti Nurbaiti"
+        }
+    },
+    {
+        "title": "Data dasar gunung api Indonesia",
+        "isbn": 0,
+        "price": 120,
+        "stock": 1,
+        "author": {
+            "name": "Indonesia. Badan Geologi"
+        }
     }
 ]

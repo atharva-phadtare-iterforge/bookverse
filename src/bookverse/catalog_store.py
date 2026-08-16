@@ -1,5 +1,6 @@
 import json
 import logging
+from .schemas import Book, Order
 
 
 class InvalidBookError(Exception):
@@ -28,7 +29,7 @@ def load_catalog():
         books = json.load(f)
 
     for book in books:
-        validate_book(book)
+        Book.model_validate(book)
 
     return books
 
@@ -38,7 +39,9 @@ def save_catalog():
 
     books.append({
         "title": "ABC",
-        "author": "Robert Kiyosaki",
+        "author": {
+            "name": "Robert Kiyosaki"
+        },
         "price": 29,
         "stock": 11
     })
