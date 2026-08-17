@@ -178,5 +178,19 @@
         "author": {
             "name": "Indonesia. Badan Geologi"
         }
+    },
+    {
+        "title": "ABC",
+        "author": {
+            "name": "Robert Kiyosaki"
+        },
+        "price": 29,
+        "stock": 11
+    },
+    {
+        "title": "ABC",
+        "author": "Robert Kiyosaki",
+        "price": 29,
+        "stock": 11
     }
 ]
