@@ -7,7 +7,16 @@ authors = [
     { name = "atharva-phadtare-iterforge", email = "atharva.phadtare@iterforge.com" }
 ]
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "fastapi>=0.141.1",
+    "httpx>=0.28.1",
+    "pydantic>=2.13.4",
+    "pydantic-settings>=2.15.0",
+    "pytest>=9.1.1",
+    "python-dotenv>=1.2.3",
+    "requests>=2.34.2",
+    "uvicorn>=0.52.3",
+]
 
 [project.scripts]
 bookverse = "bookverse:main"

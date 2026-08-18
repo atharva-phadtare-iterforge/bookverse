@@ -1,5 +1,5 @@
 import requests
-from .schemas import Book, Author
+from .schemas.schemas import Book, Author
 import json
 
 
@@ -16,13 +16,14 @@ def get_books() -> list[Book]:
 
     books = []
 
-    for book in data.get("docs", []):
+    for id, book in enumerate(data.get("docs", [])):
         authors = book.get("author_name", [])
         isbns = book.get("isbn", [])
 
         mapped_book = Book(
+            id=id,
             title=book.get("title", "Unknown"),
-            isbn=isbns[0] if isbns else 0,
+            isbn=isbns[0] if isbns else 12345678,
             price=120,
             stock=1,
             author=Author(
