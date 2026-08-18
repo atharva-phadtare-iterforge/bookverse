@@ -1,6 +1,6 @@
 import asyncio
 import httpx
-from .schemas import Book, Author
+from .schemas.schemas import Book, Author
 import json
 
 async def get_books() -> list[Book]:

@@ -1,196 +1,202 @@
 [
     {
-        "title": "Hacking APIs",
-        "isbn": 0,
+        "id": 0,
+        "title": "Learning Python",
+        "isbn": 12345678,
         "price": 120,
         "stock": 1,
         "author": {
-            "name": "Corey J. Ball"
+            "name": "Mark Lutz"
         }
     },
     {
-        "title": "Api sejarah",
-        "isbn": 0,
+        "id": 1,
+        "title": "Python For Data Analysis",
+        "isbn": 12345678,
         "price": 120,
         "stock": 1,
         "author": {
-            "name": "Ahmad Mansur Suryanegara"
+            "name": "Wes McKinney"
         }
     },
     {
-        "title": "RESTful Web APIs: Services for a Changing World",
-        "isbn": 0,
+        "id": 2,
+        "title": "Python Cookbook",
+        "isbn": 12345678,
         "price": 120,
         "stock": 1,
         "author": {
-            "name": "Leonard Richardson"
+            "name": "Alex Martelli"
         }
     },
     {
-        "title": "Django for APIs",
-        "isbn": 0,
+        "id": 3,
+        "title": "Python",
+        "isbn": 12345678,
         "price": 120,
         "stock": 1,
         "author": {
-            "name": "William S. Vincent"
+            "name": "Mark Lutz"
         }
     },
     {
-        "title": "Kereta api Indonesia",
-        "isbn": 0,
+        "id": 4,
+        "title": "Fluent Python",
+        "isbn": 12345678,
         "price": 120,
         "stock": 1,
         "author": {
-            "name": "Indonesia. Departemen Penerangan"
+            "name": "Luciano Ramalho"
         }
     },
     {
-        "title": "Api tauhid",
-        "isbn": 0,
+        "id": 5,
+        "title": "Black Hat Python",
+        "isbn": 12345678,
         "price": 120,
         "stock": 1,
         "author": {
-            "name": "Habiburrahman El Shirazy"
+            "name": "Justin Seitz"
         }
     },
     {
-        "title": "Api sejarah",
-        "isbn": 0,
+        "id": 6,
+        "title": "Programming Python",
+        "isbn": 12345678,
         "price": 120,
         "stock": 1,
         "author": {
-            "name": "Ahmad Mansur Suryanegara"
+            "name": "Mark Lutz"
         }
     },
     {
-        "title": "APIs",
-        "isbn": 0,
+        "id": 7,
+        "title": "Core Python Programming",
+        "isbn": 12345678,
         "price": 120,
         "stock": 1,
         "author": {
-            "name": "Daniel Jacobson"
+            "name": "R. Nageswara Rao"
         }
     },
     {
-        "title": "Learn API",
-        "isbn": 0,
+        "id": 8,
+        "title": "Automate the Boring Stuff with Python",
+        "isbn": 12345678,
         "price": 120,
         "stock": 1,
         "author": {
-            "name": "Learn APi"
+            "name": "Al Sweigart"
         }
     },
     {
-        "title": "API Testing and Development with Postman",
-        "isbn": 0,
+        "id": 9,
+        "title": "Think Python",
+        "isbn": 12345678,
         "price": 120,
         "stock": 1,
         "author": {
-            "name": "Dave Westerveld"
+            "name": "Allen B. Downey"
         }
     },
     {
-        "title": "Melihat api bekerja",
-        "isbn": 0,
+        "id": 11,
+        "title": "Python",
+        "isbn": 12345678,
         "price": 120,
         "stock": 1,
         "author": {
-            "name": "M. Aan Mansyur"
+            "name": "Joshua Welsh"
         }
     },
     {
-        "title": "Bandung lautan api",
-        "isbn": 0,
+        "id": 12,
+        "title": "Effective Python",
+        "isbn": 12345678,
         "price": 120,
         "stock": 1,
         "author": {
-            "name": "Djajusman."
+            "name": "Brett Slatkin"
         }
     },
     {
-        "title": "Honeybee",
-        "isbn": 0,
+        "id": 13,
+        "title": "Python, The Complete Reference",
+        "isbn": 12345678,
         "price": 120,
         "stock": 1,
         "author": {
-            "name": "Candace Fleming"
+            "name": "Martin C. Brown"
         }
     },
     {
-        "title": "API Textbook of Medicine",
-        "isbn": 0,
+        "id": 14,
+        "title": "Python Crash Course, 2nd Edition",
+        "isbn": 12345678,
         "price": 120,
         "stock": 1,
         "author": {
-            "name": "Sandhya Kamath"
+            "name": "Eric Matthes"
         }
     },
     {
-        "title": "RESTful API Design",
-        "isbn": 0,
+        "id": 15,
+        "title": "Python Crash Course, 3rd Edition",
+        "isbn": 12345678,
         "price": 120,
         "stock": 1,
         "author": {
-            "name": "Matthias Biehl"
+            "name": "Eric Matthes"
         }
     },
     {
-        "title": "Pengantar studi Islam",
-        "isbn": 0,
+        "id": 16,
+        "title": "Beginning Python",
+        "isbn": 12345678,
         "price": 120,
         "stock": 1,
         "author": {
-            "name": "Sjafa\u02bcat."
+            "name": "James R. Payne"
         }
     },
     {
-        "title": "ASP. NET Core Web API",
-        "isbn": 0,
+        "id": 17,
+        "title": "Head First Python",
+        "isbn": 12345678,
         "price": 120,
         "stock": 1,
         "author": {
-            "name": "Valerio De Sanctis"
+            "name": "Paul Barry"
         }
     },
     {
-        "title": "Unix Network Programming",
-        "isbn": 0,
+        "id": 18,
+        "title": "Python! python!",
+        "isbn": 12345678,
         "price": 120,
         "stock": 1,
         "author": {
-            "name": "W. Richard Stevens"
+            "name": "Steve Chimombo"
         }
     },
     {
-        "title": "Hukum pengangkutan darat",
-        "isbn": 0,
+        "id": 19,
+        "title": "Python for Everybody",
+        "isbn": 12345678,
         "price": 120,
         "stock": 1,
         "author": {
-            "name": "Siti Nurbaiti"
+            "name": "Charles R. Severance"
         }
     },
     {
-        "title": "Data dasar gunung api Indonesia",
-        "isbn": 0,
-        "price": 120,
-        "stock": 1,
+        "id": 22,
+        "title": "Atharva",
+        "isbn": 435738,
+        "price": 100,
+        "stock": 20,
         "author": {
-            "name": "Indonesia. Badan Geologi"
+            "name": "Atharva Phadtare"
         }
-    },
-    {
-        "title": "ABC",
-        "author": {
-            "name": "Robert Kiyosaki"
-        },
-        "price": 29,
-        "stock": 11
-    },
-    {
-        "title": "ABC",
-        "author": "Robert Kiyosaki",
-        "price": 29,
-        "stock": 11
     }
 ]

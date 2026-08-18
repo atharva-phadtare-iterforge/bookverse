@@ -9,6 +9,7 @@ class Author(BaseModel):
     name: str
 
 class Book(BaseModel):
+    id: int
     title: str
     isbn: int
     price: int = Field(gt = 0)
