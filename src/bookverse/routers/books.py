@@ -1,93 +1,235 @@
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, Depends, HTTPException
+from sqlalchemy.orm import Session
 
-from ..catalog_store import load_catalog, save_catalog
+from ..db.db import get_db
+from ..models.models import Book as BookModel, Author
 from ..schemas.schemas import Book
+from ..models.models import Book as BookModel, Author, Review
+from ..schemas.schemas import Book, ReviewCreate, ReviewResponse
+from ..core.config import get_current_user
+
 
 
 router = APIRouter(
     prefix="/books",
-    tags=["Books"]
+    tags=["Books"],
 )
 
 
 @router.get("/")
-async def get_books():
-    return load_catalog()
+async def get_books(db: Session = Depends(get_db)):
+    books = db.query(BookModel).all()
+
+    return [
+        {
+            "id": book.id,
+            "title": book.title,
+            "isbn": book.isbn,
+            "price": book.price,
+            "stock": book.stock,
+            "author": {
+                "name": book.author.name,
+                "bio": book.author.bio,
+            },
+        }
+        for book in books
+    ]
 
 
 @router.get("/{book_id}")
-async def get_book_by_id(book_id: int):
-    books = load_catalog()
-
-    for book in books:
-        if book["id"] == book_id:
-            return book
-
-    raise HTTPException(
-        status_code=404,
-        detail="Book not found"
+async def get_book_by_id(
+    book_id: int,
+    db: Session = Depends(get_db),
+):
+    book = (
+        db.query(BookModel)
+        .filter(BookModel.id == book_id)
+        .first()
     )
+
+    if book is None:
+        raise HTTPException(
+            status_code=404,
+            detail="Book not found",
+        )
+
+    return {
+        "id": book.id,
+        "title": book.title,
+        "isbn": book.isbn,
+        "price": book.price,
+        "stock": book.stock,
+        "author": {
+            "name": book.author.name,
+            "bio": book.author.bio,
+        },
+    }
 
 
 @router.post("/")
-async def create_book(book: Book):
-    books = load_catalog()
+async def create_book(
+    book: Book,
+    db: Session = Depends(get_db),
+):
+    author = (
+        db.query(Author)
+        .filter(Author.name == book.author.name)
+        .first()
+    )
 
-    new_id = max(
-        [book["id"] for book in books],
-        default=-1
-    ) + 1
+    if author is None:
+        author = Author(
+            name=book.author.name,
+            bio=book.author.bio,
+        )
+        db.add(author)
+        db.flush()
 
-    new_book = Book(
-        id=new_id,
+    new_book = BookModel(
         title=book.title,
         isbn=book.isbn,
         price=book.price,
         stock=book.stock,
-        author=book.author
+        author_id=author.id,
     )
 
-    books.append(new_book.model_dump())
-    save_catalog(books)
+    db.add(new_book)
+    db.commit()
+    db.refresh(new_book)
 
-    return new_book
+    return {
+        "id": new_book.id,
+        "title": new_book.title,
+        "isbn": new_book.isbn,
+        "price": new_book.price,
+        "stock": new_book.stock,
+        "author": {
+            "name": new_book.author.name,
+            "bio": new_book.author.bio,
+        },
+    }
 
 
 @router.put("/{book_id}")
-async def edit_book(book_id: int, updated_book: Book):
-    books = load_catalog()
-
-    for index, book in enumerate(books):
-        if book["id"] == book_id:
-            updated_book.id = book_id
-            books[index] = updated_book.model_dump()
-
-            save_catalog(books)
-
-            return books[index]
-
-    raise HTTPException(
-        status_code=404,
-        detail="Book not found"
+async def edit_book(
+    book_id: int,
+    updated_book: Book,
+    db: Session = Depends(get_db),
+):
+    book = (
+        db.query(BookModel)
+        .filter(BookModel.id == book_id)
+        .first()
     )
+
+    if book is None:
+        raise HTTPException(
+            status_code=404,
+            detail="Book not found",
+        )
+
+    author = (
+        db.query(Author)
+        .filter(Author.name == updated_book.author.name)
+        .first()
+    )
+
+    if author is None:
+        author = Author(
+            name=updated_book.author.name,
+            bio=updated_book.author.bio,
+        )
+        db.add(author)
+        db.flush()
+
+    book.title = updated_book.title
+    book.isbn = updated_book.isbn
+    book.price = updated_book.price
+    book.stock = updated_book.stock
+    book.author_id = author.id
+
+    db.commit()
+    db.refresh(book)
+
+    return {
+        "id": book.id,
+        "title": book.title,
+        "isbn": book.isbn,
+        "price": book.price,
+        "stock": book.stock,
+        "author": {
+            "name": book.author.name,
+            "bio": book.author.bio,
+        },
+    }
 
 
 @router.delete("/{book_id}")
-async def delete_book(book_id: int):
-    books = load_catalog()
-
-    for index, book in enumerate(books):
-        if book["id"] == book_id:
-            deleted_book = books.pop(index)
-
-            save_catalog(books)
-
-            return {
-                "message": "Book deleted successfully",
-                "book": deleted_book
-            }
-
-    raise HTTPException(
-        status_code=404,
-        detail="Book not found"
+async def delete_book(
+    book_id: int,
+    db: Session = Depends(get_db),
+):
+    book = (
+        db.query(BookModel)
+        .filter(BookModel.id == book_id)
+        .first()
     )
+
+    if book is None:
+        raise HTTPException(
+            status_code=404,
+            detail="Book not found",
+        )
+
+    deleted_book = {
+        "id": book.id,
+        "title": book.title,
+        "isbn": book.isbn,
+        "price": book.price,
+        "stock": book.stock,
+        "author": {
+            "name": book.author.name,
+            "bio": book.author.bio,
+        },
+    }
+
+    db.delete(book)
+    db.commit()
+
+    return {
+        "message": "Book deleted successfully",
+        "book": deleted_book,
+    }
+
+
+@router.post("/{book_id}/reviews", response_model=ReviewResponse)
+async def create_review(
+    book_id: int,
+    review: ReviewCreate,
+    db: Session = Depends(get_db),
+    current_user=Depends(get_current_user),
+):
+    book = (
+        db.query(BookModel)
+        .filter(BookModel.id == book_id)
+        .first()
+    )
+
+    if book is None:
+        raise HTTPException(
+            status_code=404,
+            detail="Book not found",
+        )
+
+    new_review = Review(
+        book_id=book_id,
+        user_id=current_user.id,
+        rating=review.rating,
+        comment=review.comment,
+    )
+
+    db.add(new_review)
+    db.commit()
+    db.refresh(new_review)
+
+    return new_review

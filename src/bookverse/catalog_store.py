@@ -5,7 +5,7 @@ import logging
 from .schemas.schemas import Book
 
 
-BOOKS_FILE = Path(__file__).parent / "books.json"
+PACKAGE_BOOKS_FILE = Path(__file__).parent / "books.json"
 
 
 class InvalidBookError(Exception):
@@ -15,8 +15,17 @@ class InvalidBookError(Exception):
 logging.basicConfig(
     filename="message.log",
     format="%(asctime)s: %(levelname)s: %(message)s",
-    level=logging.INFO
+    level=logging.INFO,
 )
+
+
+def _get_books_file() -> Path:
+    current_directory_file = Path.cwd() / "books.json"
+
+    if current_directory_file.exists():
+        return current_directory_file
+
+    return PACKAGE_BOOKS_FILE
 
 
 def validate_book(book):
@@ -38,7 +47,9 @@ def validate_book(book):
 
 
 def load_catalog():
-    with open(BOOKS_FILE, "r") as file:
+    books_file = _get_books_file()
+
+    with open(books_file, "r", encoding="utf-8") as file:
         books = json.load(file)
 
     for book in books:
@@ -49,5 +60,7 @@ def load_catalog():
 
 
 def save_catalog(books):
-    with open(BOOKS_FILE, "w") as file:
+    books_file = _get_books_file()
+
+    with open(books_file, "w", encoding="utf-8") as file:
         json.dump(books, file, indent=4)
