@@ -78,17 +78,12 @@ def test_load_invalid_catalog(tmp_path, monkeypatch, valid_book):
         load_catalog()
 
 
-def test_save_catalog(tmp_path, monkeypatch, valid_book):
-    file = tmp_path / "books.json"
-    file.write_text(json.dumps([valid_book]))
-    monkeypatch.chdir(tmp_path)
+def test_save_catalog(valid_book):
+    valid_book["id"] = 1
+    valid_book["isbn"] = 123456789
 
-    save_catalog()
+    save_catalog([valid_book])
 
-    with open("books.json") as f:
-        books = json.load(f)
+    books = load_catalog()
 
-    assert len(books) == 2
-    assert books[1]["title"] == "ABC"
-    assert books[1]["price"] == 29
-    assert books[1]["stock"] == 11
+    assert books[0]["title"] == "Python Crash Course"

@@ -3,11 +3,17 @@ from fastapi.responses import JSONResponse
 
 from .core.config import settings
 from .routers.books import router as books_router
+from .routers.users import router as users_router
+from .routers.orders import router as orders_router
+
+from .db.db import engine
+from .models.models import Base
 
 
-app = FastAPI(
-    debug=settings.debug
-)
+app = FastAPI(debug=settings.debug)
+
+
+Base.metadata.create_all(bind=engine)
 
 
 @app.exception_handler(HTTPException)
@@ -22,9 +28,9 @@ async def http_exception_handler(
             "error": {
                 "status_code": exc.status_code,
                 "message": exc.detail,
-                "path": str(request.url)
-            }
-        }
+                "path": str(request.url),
+            },
+        },
     )
 
 
@@ -40,17 +46,17 @@ async def global_exception_handler(
             "error": {
                 "status_code": 500,
                 "message": "Internal server error",
-                "path": str(request.url)
-            }
-        }
+                "path": str(request.url),
+            },
+        },
     )
 
 
 @app.get("/")
 def home():
-    return {
-        "message": "BookVerse API"
-    }
+    return {"message": "BookVerse API"}
 
 
 app.include_router(books_router)
+app.include_router(users_router)
+app.include_router(orders_router)

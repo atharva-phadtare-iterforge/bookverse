@@ -1,202 +1,162 @@
 [
-    {
-        "id": 0,
-        "title": "Learning Python",
-        "isbn": 12345678,
-        "price": 120,
-        "stock": 1,
-        "author": {
-            "name": "Mark Lutz"
-        }
-    },
-    {
-        "id": 1,
-        "title": "Python For Data Analysis",
-        "isbn": 12345678,
-        "price": 120,
-        "stock": 1,
-        "author": {
-            "name": "Wes McKinney"
-        }
-    },
-    {
-        "id": 2,
-        "title": "Python Cookbook",
-        "isbn": 12345678,
-        "price": 120,
-        "stock": 1,
-        "author": {
-            "name": "Alex Martelli"
-        }
-    },
-    {
-        "id": 3,
-        "title": "Python",
-        "isbn": 12345678,
-        "price": 120,
-        "stock": 1,
-        "author": {
-            "name": "Mark Lutz"
-        }
-    },
-    {
-        "id": 4,
-        "title": "Fluent Python",
-        "isbn": 12345678,
-        "price": 120,
-        "stock": 1,
-        "author": {
-            "name": "Luciano Ramalho"
-        }
-    },
-    {
-        "id": 5,
-        "title": "Black Hat Python",
-        "isbn": 12345678,
-        "price": 120,
-        "stock": 1,
-        "author": {
-            "name": "Justin Seitz"
-        }
-    },
-    {
-        "id": 6,
-        "title": "Programming Python",
-        "isbn": 12345678,
-        "price": 120,
-        "stock": 1,
-        "author": {
-            "name": "Mark Lutz"
-        }
-    },
-    {
-        "id": 7,
-        "title": "Core Python Programming",
-        "isbn": 12345678,
-        "price": 120,
-        "stock": 1,
-        "author": {
-            "name": "R. Nageswara Rao"
-        }
-    },
-    {
-        "id": 8,
-        "title": "Automate the Boring Stuff with Python",
-        "isbn": 12345678,
-        "price": 120,
-        "stock": 1,
-        "author": {
-            "name": "Al Sweigart"
-        }
-    },
-    {
-        "id": 9,
-        "title": "Think Python",
-        "isbn": 12345678,
-        "price": 120,
-        "stock": 1,
-        "author": {
-            "name": "Allen B. Downey"
-        }
-    },
-    {
-        "id": 11,
-        "title": "Python",
-        "isbn": 12345678,
-        "price": 120,
-        "stock": 1,
-        "author": {
-            "name": "Joshua Welsh"
-        }
-    },
-    {
-        "id": 12,
-        "title": "Effective Python",
-        "isbn": 12345678,
-        "price": 120,
-        "stock": 1,
-        "author": {
-            "name": "Brett Slatkin"
-        }
-    },
-    {
-        "id": 13,
-        "title": "Python, The Complete Reference",
-        "isbn": 12345678,
-        "price": 120,
-        "stock": 1,
-        "author": {
-            "name": "Martin C. Brown"
-        }
-    },
-    {
-        "id": 14,
-        "title": "Python Crash Course, 2nd Edition",
-        "isbn": 12345678,
-        "price": 120,
-        "stock": 1,
-        "author": {
-            "name": "Eric Matthes"
-        }
-    },
-    {
-        "id": 15,
-        "title": "Python Crash Course, 3rd Edition",
-        "isbn": 12345678,
-        "price": 120,
-        "stock": 1,
-        "author": {
-            "name": "Eric Matthes"
-        }
-    },
-    {
-        "id": 16,
-        "title": "Beginning Python",
-        "isbn": 12345678,
-        "price": 120,
-        "stock": 1,
-        "author": {
-            "name": "James R. Payne"
-        }
-    },
-    {
-        "id": 17,
-        "title": "Head First Python",
-        "isbn": 12345678,
-        "price": 120,
-        "stock": 1,
-        "author": {
-            "name": "Paul Barry"
-        }
-    },
-    {
-        "id": 18,
-        "title": "Python! python!",
-        "isbn": 12345678,
-        "price": 120,
-        "stock": 1,
-        "author": {
-            "name": "Steve Chimombo"
-        }
-    },
-    {
-        "id": 19,
-        "title": "Python for Everybody",
-        "isbn": 12345678,
-        "price": 120,
-        "stock": 1,
-        "author": {
-            "name": "Charles R. Severance"
-        }
-    },
-    {
-        "id": 22,
-        "title": "Atharva",
-        "isbn": 435738,
-        "price": 100,
-        "stock": 20,
-        "author": {
-            "name": "Atharva Phadtare"
-        }
-    }
+  {
+    "id": 1,
+    "title": "Python Crash Course",
+    "isbn": 9781593279288,
+    "price": 29.99,
+    "stock": 10,
+    "author": {"name": "Eric Matthes"}
+  },
+  {
+    "id": 2,
+    "title": "Clean Code",
+    "isbn": 9780132350884,
+    "price": 34.99,
+    "stock": 8,
+    "author": {"name": "Robert C. Martin"}
+  },
+  {
+    "id": 3,
+    "title": "The Pragmatic Programmer",
+    "isbn": 9780135957059,
+    "price": 39.99,
+    "stock": 12,
+    "author": {"name": "David Thomas"}
+  },
+  {
+    "id": 4,
+    "title": "Fluent Python",
+    "isbn": 9781492056355,
+    "price": 44.99,
+    "stock": 6,
+    "author": {"name": "Luciano Ramalho"}
+  },
+  {
+    "id": 5,
+    "title": "Effective Python",
+    "isbn": 9780138172456,
+    "price": 42.99,
+    "stock": 7,
+    "author": {"name": "Brett Slatkin"}
+  },
+  {
+    "id": 6,
+    "title": "Automate the Boring Stuff with Python",
+    "isbn": 9781593279929,
+    "price": 27.99,
+    "stock": 15,
+    "author": {"name": "Al Sweigart"}
+  },
+  {
+    "id": 7,
+    "title": "Django for Beginners",
+    "isbn": 9781735467207,
+    "price": 32.99,
+    "stock": 9,
+    "author": {"name": "William S. Vincent"}
+  },
+  {
+    "id": 8,
+    "title": "FastAPI Cookbook",
+    "isbn": 9781835464353,
+    "price": 36.99,
+    "stock": 11,
+    "author": {"name": "Sebastian Ramirez"}
+  },
+  {
+    "id": 9,
+    "title": "Designing Data-Intensive Applications",
+    "isbn": 9781449373320,
+    "price": 49.99,
+    "stock": 5,
+    "author": {"name": "Martin Kleppmann"}
+  },
+  {
+    "id": 10,
+    "title": "Database Internals",
+    "isbn": 9781492040347,
+    "price": 45.99,
+    "stock": 4,
+    "author": {"name": "Alex Petrov"}
+  },
+  {
+    "id": 11,
+    "title": "Learning SQL",
+    "isbn": 9781492057611,
+    "price": 31.99,
+    "stock": 10,
+    "author": {"name": "Alan Beaulieu"}
+  },
+  {
+    "id": 12,
+    "title": "Head First Design Patterns",
+    "isbn": 9781492078005,
+    "price": 41.99,
+    "stock": 8,
+    "author": {"name": "Eric Freeman"}
+  },
+  {
+    "id": 13,
+    "title": "Refactoring",
+    "isbn": 9780134757599,
+    "price": 47.99,
+    "stock": 6,
+    "author": {"name": "Martin Fowler"}
+  },
+  {
+    "id": 14,
+    "title": "The Clean Coder",
+    "isbn": 9780137081073,
+    "price": 33.99,
+    "stock": 9,
+    "author": {"name": "Robert C. Martin"}
+  },
+  {
+    "id": 15,
+    "title": "You Don't Know JS",
+    "isbn": 9781098124045,
+    "price": 24.99,
+    "stock": 13,
+    "author": {"name": "Kyle Simpson"}
+  },
+  {
+    "id": 16,
+    "title": "Learning JavaScript",
+    "isbn": 9781492055759,
+    "price": 35.99,
+    "stock": 7,
+    "author": {"name": "Ethan Brown"}
+  },
+  {
+    "id": 17,
+    "title": "Grokking Algorithms",
+    "isbn": 9781617292231,
+    "price": 30.99,
+    "stock": 14,
+    "author": {"name": "Aditya Bhargava"}
+  },
+  {
+    "id": 18,
+    "title": "Computer Networking",
+    "isbn": 9780136681557,
+    "price": 52.99,
+    "stock": 5,
+    "author": {"name": "James Kurose"}
+  },
+  {
+    "id": 19,
+    "title": "Operating System Concepts",
+    "isbn": 9781119800361,
+    "price": 55.99,
+    "stock": 4,
+    "author": {"name": "Abraham Silberschatz"}
+  },
+  {
+    "id": 20,
+    "title": "Artificial Intelligence: A Modern Approach",
+    "isbn": 9780134610993,
+    "price": 59.99,
+    "stock": 3,
+    "author": {"name": "Stuart Russell"}
+  }
 ]
