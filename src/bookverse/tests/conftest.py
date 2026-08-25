@@ -1,7 +1,7 @@
 import os
 
 os.environ["DATABASE_URL"] = (
-    "postgresql+psycopg2://postgres:123456@localhost:5432/bookverse_test"
+    "postgresql+psycopg2://postgres:123456@db:5432/bookverse_test"
 )
 
 import pytest
